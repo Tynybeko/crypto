@@ -1,0 +1,23 @@
+.my_tools {
+    width: 100%;
+    padding: 20px 30px;
+
+    .inner {
+        width: 100%;
+
+        .block {
+            border-radius: 20px;
+            padding: 10px;
+            border: solid 1px black;
+
+            h3 {
+                font-size: 18px;
+                font-family: "Roboto", cursive;
+                font-weight: 400;
+                text-align: center;
+
+            }
+        }
+    }
+
+}

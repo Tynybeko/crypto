@@ -1,0 +1,128 @@
+.banner {
+    width: 100%;
+
+
+
+    .inner {
+        background-position: center;
+        background-size: cover;
+        height: 50vh;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding: 0 30px;
+        justify-content: space-between;
+
+        .text {
+            width: 50%;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+
+            h1 {
+                padding-bottom: 20px;
+                font-size: 25px;
+                font-family: 'Roboto', cursive;
+                font-weight: 400;
+                text-decoration: solid 1px white;
+            }
+
+
+            p {
+                font-family: 'Roboto', cursive;
+                font-weight: 400;
+                opacity: 1;
+                line-height: 25px;
+                font-size: 18px;
+            }
+        }
+
+        form {
+            background-color: white;
+            border-radius: 30px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 40%;
+            padding: 40px;
+
+
+            label {
+                width: 100%;
+                border-radius: 20px;
+
+
+                input {
+                    width: 100%;
+                    padding: 10px;
+                    font-size: 15px;
+                    font-family: 'Roboto', cursive;
+                    font-weight: 400;
+                    border-radius: 20px;
+
+                }
+
+                p {
+                    margin-top: 5px;
+                    font-size: 14px;
+                    font-family: 'Roboto', cursive;
+                    font-weight: 400;
+                    margin-left: 5px;
+                }
+
+                input[type="submit"] {
+                    cursor: pointer;
+                    border: none;
+                    background-color: #42a0d1;
+                    font-size: 16px;
+                    color: white;
+                    transition: all .2s ease-in-out;
+                    opacity: .8;
+
+                    &:hover {
+                        transform: translate(-2px, -2px);
+                        transition: all .2s ease-in-out;
+                        opacity: 1;
+                    }
+                }
+
+                input[type="submit"]:disabled {
+                    background-color: grey;
+
+                    &:hover {
+                        color: initial;
+                        transition: all .2s ease-in-out;
+                    }
+                }
+
+
+
+                select {
+                    background-color: white;
+                    width: 100%;
+                    padding: 10px;
+                    font-size: 15px;
+                    font-family: 'Roboto', cursive;
+                    font-weight: 400;
+                    border-radius: 20px;
+                }
+            }
+
+            h1 {
+                font-size: 20px;
+                font-family: 'Roboto', cursive;
+                font-weight: 400;
+            }
+        }
+    }
+
+
+
+
+
+}

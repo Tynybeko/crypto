@@ -1,0 +1,36 @@
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+
+    nav {
+        h1 {
+            font-weight: 400;
+            text-transform: uppercase;
+            font-family: "Roboto", cursive;
+            font-size: 20px;
+        }
+    }
+
+    .tools {
+
+        .changeCurrent {
+            display: flex;
+            align-items: center;
+
+            span {
+                width: 10px;
+                height: 1px;
+                background-color: #859ae9;
+                margin-right: 5px;
+
+            }
+
+            color: #7e96eb;
+            font-weight: 500;
+
+        }
+    }
+}
