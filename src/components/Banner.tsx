@@ -74,7 +74,7 @@ const Banner: React.FC = () => {
                     delay: 5000,
                     disableOnInteraction: true
                 }}
-                scrollbar={{ draggable: true, hide: true }}
+                scrollbar={{ draggable: true,  }}
             >
                 {
                     bannerInner.map(el => (

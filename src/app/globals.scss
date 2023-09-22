@@ -7,7 +7,38 @@
   margin: 0;
   user-select: none;
   font-family: "Roboto";
+  scrollbar-width: thin;
+  scrollbar-color: #67b2da #f1f1f1;
+
+  scrollbar-thumb {
+    background: #67b2da;
+    border-radius: 6px !important;
+  }
+
+  /* Трек */
+  scrollbar-track {
+    transform: rotate(90deg);
+  }
+
+  ::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #67b2da;
+    border-radius: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
 }
+
+
+
+/* Thumb (перемещаемая часть) */
 
 body {
   display: flex;
