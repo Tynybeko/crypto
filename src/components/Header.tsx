@@ -7,12 +7,12 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
-import Button from '@mui/material/Button';
 import { usePathname } from 'next/navigation'
+
+
 const Header: React.FC = () => {
     const path = usePathname()
     const router = useRouter()
-    console.log(path);
 
     return (
         <header>
@@ -20,14 +20,7 @@ const Header: React.FC = () => {
                 <h1>{path == '/' ? 'Панель приборов' : (path == '/calculator') ? 'Калькулятор' : (path == '/news') ? 'Новости' : ''}</h1>
             </nav>
             <div className="tools">
-                <div className="changeCurrent">
-                    <ControlledOpenSelect />
-                    <span></span>
-                    USDT
-                </div>
-                <div className="changeLang">
-
-                </div>
+              
             </div>
 
         </header>

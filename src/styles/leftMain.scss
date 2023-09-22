@@ -3,11 +3,19 @@
     position: fixed;
 
 
+
     .logo {
         display: flex;
         align-items: center;
         gap: 10px;
         position: relative;
+
+        a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            position: relative;
+        }
 
         p {
             position: absolute;

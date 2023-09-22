@@ -8,9 +8,15 @@
   user-select: none;
 }
 
+body {
+  display: flex;
+  justify-content: center;
+}
+
 .container {
   display: flex;
   height: 100%;
+  max-width: 2000px;
   width: 100%;
   justify-content: space-between;
 
@@ -20,13 +26,12 @@
     justify-content: center;
     width: 330px;
     padding: 30px 50px;
-
-    border-right: 0.3px solid rgba(128, 128, 128, 0.368);
-
   }
 
 
   main {
+    border-left: 0.3px solid rgba(128, 128, 128, 0.368);
+
     display: flex;
     flex-direction: column;
     height: 100%;
