@@ -2,12 +2,19 @@
     width: 100%;
     padding: 50px 30px;
 
+
+    h1 {
+        font-family: "Roboto", cursive;
+        font-weight: 400;
+        padding-bottom: 20px;
+    }
+
     .inner {
         width: 100%;
         display: grid;
         gap: 20px;
         justify-items: center;
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
 
         @keyframes my_tool_effect {
             from {
@@ -23,6 +30,7 @@
 
 
         .block {
+            width: 100%;
             border-radius: 20px;
             padding: 10px;
             display: flex;

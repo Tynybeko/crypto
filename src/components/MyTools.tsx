@@ -14,6 +14,7 @@ const MyTools: React.FC = () => {
     ]
     return (
         <div className='my_tools'>
+            <h1>Наши преимущества</h1>
             <div className="inner">
                 {
                     tools.map(el => (
