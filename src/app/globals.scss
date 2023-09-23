@@ -17,7 +17,7 @@
 
   /* Трек */
   scrollbar-track {
-    transform: rotate(90deg);
+    transform: rotate(90deg) !important;
   }
 
   ::-webkit-scrollbar {
