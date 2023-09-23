@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation'
 
 
 const LeftMain: React.FC = () => {
+    console.log(process.env.BOT_API)
     const path = usePathname()
 
     return (
