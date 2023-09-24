@@ -3,3 +3,9 @@
     height: 700px !important;
     padding: 0 30px;
 }
+
+@media (max-width: 1200px) {
+    .tradingview-widget-container {
+        height: 400px !important;
+    }
+}

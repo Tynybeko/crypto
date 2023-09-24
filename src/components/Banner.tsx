@@ -86,17 +86,16 @@ const Banner: React.FC = () => {
                                 <div className="text">
                                     <h1>{el.title}</h1>
                                     <p>{el.desc}</p>
-                                    <Link href={'/calculator'}>Сможешь сразу посчитать!</Link>
                                 </div>
                                 <form onSubmit={handleSumbit} action="post">
                                     <h1>Оставьте свои данные!</h1>
                                     <label htmlFor="name">
                                         <input onChange={handleChange} value={formData?.name} required type="text" name='name' id='name' placeholder='Имя' />
-                                        <p>ФИО</p>
+                                        <p>Ваша имя</p>
                                     </label>
                                     <label htmlFor="phone">
                                         <input onChange={handleChange} pattern='^\+996\s?\d{9}$' value={formData?.phone} required type="tel" name='phone' id='phone' placeholder='Телефон' />
-                                        <p>Номер телефона</p>
+                                        <p>Ваш номер телефона</p>
                                     </label>
                                     <label htmlFor="option">
                                         <select value={formData.option} onChange={handleChange} required name="option" id="option">
