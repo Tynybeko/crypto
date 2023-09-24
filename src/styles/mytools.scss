@@ -6,7 +6,7 @@
     h1 {
         font-family: "Roboto";
         font-weight: 400;
-        padding-bottom: 20px;
+        padding-bottom: 30px;
     }
 
     .inner {
@@ -54,7 +54,7 @@
             h3 {
                 width: 100%;
                 text-align: left;
-                font-size: 18px;
+                font-size: 20px;
                 font-family: "Roboto", ;
                 font-weight: 500;
                 padding-left: 10px;
@@ -66,15 +66,15 @@
                 gap: 15px;
                 width: 100%;
                 height: 100%;
+                align-items: center;
 
                 p {
-                    max-height: 200px;
                     width: 100%;
                     height: 100%;
-                    font-size: 15px;
+                    font-size: 18px;
                     font-family: "Roboto";
                     display: -webkit-box;
-                    -webkit-line-clamp: 11;
+                    -webkit-line-clamp: 9;
                     -webkit-box-orient: vertical;
                     overflow: hidden;
                 }

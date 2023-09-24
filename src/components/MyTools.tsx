@@ -18,7 +18,7 @@ const MyTools: React.FC = () => {
             <div className="inner">
                 {
                     tools.map(el => (
-                        <div className="block">
+                        <div key={el.id} className="block">
                             <h3>{el.title}</h3>
                             <div>
                                 <img src={el.img} alt="Photo" />

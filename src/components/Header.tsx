@@ -13,11 +13,12 @@ import { usePathname } from 'next/navigation'
 const Header: React.FC = () => {
     const path = usePathname()
     const router = useRouter()
+    
 
     return (
         <header>
             <nav>
-                <h1>{path == '/' ? 'Панель приборов' : (path == '/calculator') ? 'Калькулятор' : (path == '/news') ? 'Новости' : ''}</h1>
+                <h1>{path == '/' ? 'Панель приборов' : (path == '/calculator') ? 'Калькулятор' : (path == '/about') ? 'О нас' : ''}</h1>
             </nav>
             <div className="tools">
               

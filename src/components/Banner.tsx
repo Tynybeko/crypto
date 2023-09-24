@@ -7,11 +7,14 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import useSendMessage from '@/hooks/useSendMessage';
 import Modal from './Modal';
+import Link from 'next/link';
+
 
 
 
 
 const Banner: React.FC = () => {
+
     const [isOpen, setOpen] = useState<boolean>(false)
     const [submiting, setSubmit] = useState<boolean>(false)
     const bannerInner = [
@@ -74,7 +77,7 @@ const Banner: React.FC = () => {
                     delay: 5000,
                     disableOnInteraction: true
                 }}
-                scrollbar={{ draggable: true,  }}
+                scrollbar={{ draggable: true, }}
             >
                 {
                     bannerInner.map(el => (
@@ -83,6 +86,7 @@ const Banner: React.FC = () => {
                                 <div className="text">
                                     <h1>{el.title}</h1>
                                     <p>{el.desc}</p>
+                                    <Link href={'/calculator'}>Сможешь сразу посчитать!</Link>
                                 </div>
                                 <form onSubmit={handleSumbit} action="post">
                                     <h1>Оставьте свои данные!</h1>

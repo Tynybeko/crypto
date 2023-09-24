@@ -1,0 +1,44 @@
+.myCurrency {
+    display: flex;
+    flex-direction: column;
+
+
+    h3 {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 400;
+        padding-bottom: 10px;
+        font-size: 20px;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
+
+    .block {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        img {
+            width: 30px;
+            height: 30px;
+        }
+
+        p {
+            font-family: "Roboto", cursive;
+            font-size: 15px;
+            font-weight: 400;
+        }
+    }
+
+    .foot {
+        margin-top: 20px;
+        font-size: 12px;
+        opacity: .8;
+        text-decoration: underline 1px black;
+    }
+}
