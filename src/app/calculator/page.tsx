@@ -1,13 +1,20 @@
 import React from 'react'
 import { Metadata } from 'next'
+import Calculator from '@/components/Calculator'
+import '@/styles/calculatorPage.scss'
 
 export const metadata: Metadata = {
-    title: 'CALC Банк "Cryptonit.kg": Купить и продать криптовалюту в Оше',
+    title: 'Калькулятор Cryptonit.kg: Посчитай легко и быстро',
     description: 'Обменивайте, покупайте и продавайте свою крипту по стабильным и выгодным ценам!',
 }
+
 const page: React.FC = () => {
     return (
-        <div>CALC</div>
+        <div className='calculator-page'>
+            <div className="inner">
+                <Calculator />
+            </div>
+        </div>
     )
 }
 

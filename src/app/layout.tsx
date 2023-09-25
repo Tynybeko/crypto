@@ -17,7 +17,6 @@ export default function RootLayout({
                         <LeftMain />
                     </div>
                     <main>
-                        <Header />
                         {children}
                     </main>
                 </div>

@@ -1,0 +1,77 @@
+.myChangeInput {
+    height: 100%;
+    width: 100%;
+
+    .inner {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        label {
+            position: relative;
+            width: 100%;
+
+            input {
+                text-align: center;
+                border: none;
+                width: 100%;
+                padding: 5px 10px;
+                border: 1px solid black;
+                border-radius: 20px;
+                outline: none;
+                font-size: 18px;
+            }
+
+
+            .selector {
+                position: absolute;
+                background-color: white;
+                z-index: 9;
+                width: 100%;
+                height: 200px;
+                display: flex;
+                flex-direction: column;
+                overflow: auto;
+                gap: 10px;
+
+                option {
+                    width: 100%;
+                    transition: all .2s ease-in-out;
+                    gap: 5px;
+                    padding: 22px;
+                    align-items: center;
+                    cursor: pointer;
+
+                    &:hover {
+                        -webkit-box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+                        -moz-box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+                        box-shadow: 0px 5px 5px -5px rgba(34, 60, 80, 0.6);
+                    }
+
+                    display: flex;
+                    width: 100%;
+
+                    .icons {
+                        display: flex;
+                        position: relative;
+                        width: 30px;
+                        height: 30px;
+                    }
+
+                    img {
+                        width: 20px;
+                        height: 20px;
+                        font-style: italic;
+                        border-radius: 50%;
+                        font-size: 12px;
+                        font-family: "Roboto";
+                        color: black;
+                    }
+
+
+
+                }
+            }
+        }
+    }
+}

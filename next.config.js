@@ -5,7 +5,8 @@ const nextConfig = {
         defaultLocale: 'ru'
     },
     env: {
-        BOT_API: process.env.BOT_API
+        BOT_API: process.env.BOT_API,
+        COIN_API: process.env.COIN_API
     }
 }
 
