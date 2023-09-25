@@ -4,6 +4,15 @@ import axios from 'axios'
 import MyChangeSelect from './MyChangeSelect'
 import 'dotenv'
 
+export async function fetchCryptoBase() {
+  try {
+    const { data } = await axios.get('https://test-ss-lrp7.onrender.com/cryptobase')
+    return data
+  } catch (e) {
+    return []
+  }
+}
+
 export interface CRP {
   currentCRP: string,
   changeCRP: string,
@@ -17,23 +26,15 @@ export interface quote {
   id: number,
   name: string,
   symbol: string,
+  changed: false,
   quote: {
     usd: {
       price: number
     }
   }
 }
-export async function fetchCurrencyCRP() {
-  console.log(process.env.COIN_API);
-  const { data } = await axios.get('https://sandbox-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?start=1&limit=5000', {
-    headers: {
-      "X-CMC_PRO_API_KEY": process.env.COIN_API,
-      "Content-Type": 'application/json'
-    }
-  })
-  console.log(data.data);
-  return data.data
-}
+
+
 const Calculator = () => {
   const [myCurrency, setMyCurrency] = useState<CRP | undefined>()
   const [CRP, setCRP] = useState<quote[] | undefined>(undefined)
@@ -42,8 +43,9 @@ const Calculator = () => {
 
   useEffect(() => {
     setLoad(true)
-    fetchCurrencyCRP().then(res => {
+    fetchCryptoBase().then(res => {
       setCRP(res)
+      setLoad(false)
     })
   }, [])
   return (
@@ -53,24 +55,7 @@ const Calculator = () => {
       <form action="">
         <div className="selects">
           <MyChangeSelect data={CRP} />
-          <label htmlFor="current-CRP">
-            <select name="current-CRP" id="current-CRP"></select>
-            <p></p>
-          </label>
-          <label htmlFor="change-CRP">
-            <select name="change-CRP" id="change-CRP"></select>
-            <p></p>
-          </label>
-        </div>
-        <div className="inputs">
-          <label htmlFor="current-Currency">
-            <input id='current-Currency' name='current-Currency' type="text" />
-            <p></p>
-          </label>
-          <label htmlFor="change-Currency">
-            <input id='change-Currency' name='change-Currency' type="text" />
-            <p></p>
-          </label>
+          <MyChangeSelect data={CRP} />
         </div>
       </form>
 

@@ -1,30 +1,57 @@
 .myChangeInput {
-    height: 100%;
-    width: 100%;
+    width: 300px;
 
     .inner {
         width: 100%;
         display: flex;
         flex-direction: column;
 
-        label {
-            position: relative;
+        .changer-input {
             width: 100%;
+            position: relative;
 
-            input {
-                text-align: center;
-                border: none;
-                width: 100%;
-                padding: 5px 10px;
-                border: 1px solid black;
-                border-radius: 20px;
-                outline: none;
-                font-size: 18px;
+            .content-input {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                    font-style: italic;
+                    border-radius: 50%;
+                    font-size: 12px;
+                    font-family: "Roboto";
+                    color: black;
+                }
+
+                input {
+                    position: relative;
+                    border: none;
+                    width: 100%;
+                    padding: 5px 10px;
+                    border: 1px solid black;
+                    border-radius: 20px;
+                    outline: none;
+                    font-size: 18px;
+                }
+
+                &-field {
+                    display: flex;
+                    gap: 10px;
+                }
             }
 
 
+
+
             .selector {
+                padding-top: 10px;
+                border: 1px solid rgba(0, 0, 0, 0.401);
+                border-top: none;
+                transform: scale(0) translateY(-100%);
                 position: absolute;
+                transition: transform .2s ease-in-out;
                 background-color: white;
                 z-index: 9;
                 width: 100%;
@@ -33,6 +60,7 @@
                 flex-direction: column;
                 overflow: auto;
                 gap: 10px;
+                top: 35px;
 
                 option {
                     width: 100%;
@@ -71,6 +99,11 @@
 
 
                 }
+            }
+
+            .open-selector {
+                transform: scale(1) translateY(0);
+                transition: transform .2s ease-in-out;
             }
         }
     }
