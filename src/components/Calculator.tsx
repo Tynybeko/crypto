@@ -1,8 +1,9 @@
 'use client'
-import React, { useEffect, useState } from 'react'
+import React, { SetStateAction, useEffect, useState } from 'react'
 import axios from 'axios'
 import MyChangeSelect from './MyChangeSelect'
 import 'dotenv'
+import TradeView from './TradeView'
 
 export async function fetchCryptoBase() {
   try {
@@ -13,15 +14,9 @@ export async function fetchCryptoBase() {
   }
 }
 
-export interface CRP {
-  currentCRP: string,
-  changeCRP: string,
-}
 
-export interface currency {
-  currentCurrency: number,
-  changeCurrency: number,
-}
+
+
 export interface quote {
   id: number,
   name: string,
@@ -36,15 +31,16 @@ export interface quote {
 
 
 const Calculator = () => {
-  const [myCurrency, setMyCurrency] = useState<CRP | undefined>()
+  const [myCurrency, setMyCurrency] = useState<quote>()
   const [CRP, setCRP] = useState<quote[] | undefined>(undefined)
-  const [{ currentCurrency, changeCurrency }, setCurrentCurrency] = useState<currency>({ currentCurrency: 0, changeCurrency: 0 })
-  const [loading, setLoad] = useState<boolean>(false)
+  const [setCurrency, setCurrentCurrency] = useState<quote>()
+  const [loading, setLoad] = useState<boolean>(true)
 
   useEffect(() => {
-    setLoad(true)
     fetchCryptoBase().then(res => {
       setCRP(res)
+      setMyCurrency(res[0])
+      setCurrentCurrency(res[1])
       setLoad(false)
     })
   }, [])
@@ -53,12 +49,16 @@ const Calculator = () => {
       <div className="text">
       </div>
       <form action="">
-        <div className="selects">
-          <MyChangeSelect data={CRP} />
-          <MyChangeSelect data={CRP} />
-        </div>
-      </form>
+        {loading ? <img src='assets/loading.gif' alt='Loading...' /> :
+          <div className="selects">
+            <MyChangeSelect setQuote={setMyCurrency as React.Dispatch<SetStateAction<quote>>} myQuote={myCurrency as quote} data={CRP} />
+            <img className='swapper' src={`/assets/swapperArrow.png`} alt="swap" />
+            <MyChangeSelect setQuote={setCurrentCurrency as React.Dispatch<SetStateAction<quote>>} myQuote={setCurrency as quote} data={CRP} />
+          </div>
+        }
 
+      </form>
+      <TradeView />
     </div>
   )
 }

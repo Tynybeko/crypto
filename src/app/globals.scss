@@ -10,6 +10,15 @@
   scrollbar-width: thin;
   scrollbar-color: #67b2da #f1f1f1;
 
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+
   scrollbar-thumb {
     background: #67b2da;
     border-radius: 6px !important;
