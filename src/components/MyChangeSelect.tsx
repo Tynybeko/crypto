@@ -15,7 +15,7 @@ const MyChangeSelect = ({ data, setQuote, myQuote }: { data: quote[] | undefined
                 <div className='changer-input'>
                     <div className="content-input">
                         <div className="content-input-field">
-                            {myQuote ? <img src={`/assets/CRP/${myQuote.symbol}-logo.png`} alt={myQuote.symbol} /> : ''}
+                            {myQuote ? <img src={`/assets/CRP/${myQuote.symbol.toLowerCase()}-logo.png`} alt={myQuote.symbol} /> : ''}
                             <input onClick={() => {
                                 setOpenSelect(prev => !prev)
                                 setData(data)
@@ -36,7 +36,7 @@ const MyChangeSelect = ({ data, setQuote, myQuote }: { data: quote[] | undefined
                                     setValue(el.name)
                                     setOpenSelect(false)
                                 }} value="asdsad"><div className="icons">
-                                        <img src={`/assets/CRP/${el.symbol}-logo.png`} alt={el.symbol} />
+                                        <img src={`/assets/CRP/${el.symbol.toLowerCase()}-logo.png`} alt={el.symbol} />
                                     </div> {el.name} </option>
                             ))
                         }
