@@ -50,7 +50,7 @@ const FormTG = () => {
             </label>
             <label htmlFor="option">
                 <select value={formData.option} onChange={handleChange} required name="option" id="option">
-                    <option  value="Обмен">Обмен</option>
+                    <option selected value="Обмен">Обмен</option>
                     <option value="Купля\Продажа">Купля или Продажа</option>
                     <option value="Консультация">Консультация</option>
                 </select>

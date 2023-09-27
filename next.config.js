@@ -1,9 +1,6 @@
 /** @type {import('next').NextConfig} */
 const withPWA = require('next-pwa')({
     dest: 'public',
-    register: true,
-    scope: '/',
-    sw: 'service-worker.js',
 })
 
 const nextConfig = withPWA({

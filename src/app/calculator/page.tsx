@@ -1,9 +1,8 @@
 import React from 'react'
 import { Metadata } from 'next'
-import Calculator from '@/components/Calculator'
+import Calculator from '@/app/components/Calculator'
 import '@/styles/calculatorPage.scss'
-import axios from 'axios';
-import TradeView from '@/components/TradeView';
+import TradeView from '@/app/components/TradeView';
 
 
 
@@ -11,9 +10,6 @@ export const metadata: Metadata = {
     title: 'Калькулятор Cryptonit.kg: Посчитай легко и быстро',
     description: 'Обменивайте, покупайте и продавайте свою крипту по стабильным и выгодным ценам!',
 }
-
-
-
 
 
 const page: React.FC = () => {

@@ -4,6 +4,7 @@ import React from 'react'
 import '@/styles/mytools.scss'
 
 const MyTools: React.FC = () => {
+
     const tools = [
         { id: '1ta', icon: '/assets/tools/security-Icon.png', img: '/assets/tools/security.webp', title: 'Безопасность', desc: 'Мы обеспечиваем высший уровень безопасности для ваших финансов и данных. Все транзакции защищены передовыми шифровальными технологиями, и мы активно следим за обеспечением конфиденциальности ваших средств и информации.' },
         { id: '2ta', icon: '/assets/tools/global-Icon.png', img: '/assets/tools/global.webp', title: 'Глобальное покрытие', desc: 'Наши услуги доступны в любой точке мира. Вы можете отправлять и получать деньги, обменивать валюту и осуществлять финансовые операции в любой стране, где мы представлены.' },
