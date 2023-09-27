@@ -40,15 +40,15 @@ const MyChangeSelect: React.FC<setSelectParams> = ({ data, myQuote, setQuote, cu
                     <div className={`selector ${isOpenSelect ? 'open-selector' : ''}`}>
                         {
                             myData?.map(el => (
-                                <option onClick={() => {
+                                <div className='option' onClick={() => {
                                     setQuote(el)
                                     setValue(el.symbol)
                                     setOpenSelect(false)
                                     setMyState('0')
                                     setInputValue(prev => ({ ...prev, Input1: 0, Input2: 0 }))
-                                }} value="asdsad"><div className="icons">
+                                }}><div className="icons">
                                         <img src={`/assets/CRP/${el.symbol.toLowerCase()}-logo.png`} alt={el.symbol} />
-                                    </div> {el.name} </option>
+                                    </div> {el.name} </div>
                             ))
                         }
                     </div>

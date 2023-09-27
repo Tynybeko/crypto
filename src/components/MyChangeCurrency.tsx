@@ -56,15 +56,15 @@ const MyChangeSelect: React.FC<SetCurrencyParams> = ({ data, myQuote, setQuote, 
                     <div className={`selector ${isOpenSelect ? 'open-selector' : ''}`}>
                         {
                             myData?.map(el => (
-                                <option onClick={() => {
+                                <div className='option' onClick={() => {
                                     setQuote(el)
                                     setValue(el.name)
                                     setOpenSelect(false)
                                     setMyState('0')
                                     setInputValue(prev => ({ ...prev, Input1: 0, Input2: 0 }))
-                                }} value="asdsad"><div className="icons">
+                                }} ><div className="icons">
                                         <img className={`${el.name == 'KGS' ? 'icon-kgs' : ''}`} src={`/assets/${el.name.toLowerCase()}.${el.name != 'USD' ? 'png' : 'webp'}`} alt={el.name} />
-                                    </div> {el.name} </option>
+                                    </div> {el.name} </div>
                             ))
                         }
                     </div>

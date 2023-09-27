@@ -98,18 +98,18 @@
                 border-radius: 0 0 20px 20px;
 
 
-                option:nth-child(1) {
+                .option:nth-child(1) {
                     padding-top: 30px;
                 }
 
-                option {
+                .option {
                     background-color: white;
                     border-radius: 20px;
 
                     width: 100%;
                     transition: all .2s ease-in-out;
                     gap: 5px;
-                    padding: 22px;
+                    padding: 10px;
                     padding-left: 10px;
                     align-items: center;
                     cursor: pointer;
