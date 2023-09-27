@@ -19,41 +19,14 @@
             position: relative;
         }
 
-        p {
-            position: absolute;
-            z-index: -1;
-            font-size: 40px;
-            font-weight: 500;
-            opacity: .6;
-            left: -5px;
-            top: -10px;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            -moz-background-clip: text;
-            -moz-text-fill-color: transparent;
-            background-image: linear-gradient(45deg, #7877a1, #e71f58);
-        }
+
 
         img {
-            width: 60px;
-            height: 60px;
+            width: 180px;
+            // height: 60px;
         }
 
-
-        h1 {
-            position: relative;
-            color: #2888bc;
-            font-size: 22px;
-            font-weight: 500;
-
-            span {
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                -moz-background-clip: text;
-                -moz-text-fill-color: transparent;
-                background-image: linear-gradient(45deg, #348fd4, #e97837af);
-            }
-        }
+        padding-bottom: 20px;
     }
 
     .inner {
@@ -85,7 +58,7 @@
         }
 
         .active {
-            color: var(--main-colors-black, #0E0637);
+            color: #3559c7;
             font-feature-settings: 'ss06' on;
             font-weight: 500;
             line-height: 145%;

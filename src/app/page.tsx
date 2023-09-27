@@ -3,7 +3,7 @@ import TradeView from "@/components/TradeView";
 import { Metadata } from 'next'
 import '@/styles/homePage.scss'
 import MyTools from "@/components/MyTools";
-
+import Head from "next/head";
 
 
 export const metadata: Metadata = {

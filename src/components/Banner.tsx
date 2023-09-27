@@ -82,34 +82,38 @@ const Banner: React.FC = () => {
                 {
                     bannerInner.map(el => (
                         <SwiperSlide>
-                            <div key={el.id} style={{ backgroundImage: `url(${el.img})`, width: '100%' }} className="inner">
-                                <div className="text">
-                                    <h1>{el.title}</h1>
-                                    <p>{el.desc}</p>
+                            <div key={el.id} style={{ backgroundImage: `url(${el.img})`, width: '100%' }} className="back">
+                                <div className="inner">
+                                    <div className="text">
+                                        <h1>{el.title}</h1>
+                                        <p>{el.desc}</p>
+                                    </div>
+                                    <form onSubmit={handleSumbit} action="post">
+                                        <h1>Оставьте свои данные!</h1>
+                                      
+                                        <label htmlFor="name">
+                                            <input onChange={handleChange} value={formData?.name} required type="text" name='name' id='name' placeholder='Имя' />
+                                            <p>Ваша имя</p>
+                                        </label>
+                                        <label htmlFor="phone">
+                                            <input onChange={handleChange} pattern='^\+996\s?\d{9}$' value={formData?.phone} required type="tel" name='phone' id='phone' placeholder='Телефон' />
+                                            <p>Ваш номер телефона</p>
+                                        </label>
+                                        <label htmlFor="option">
+                                            <select value={formData.option} onChange={handleChange} required name="option" id="option">
+                                                <option selected value="Обмен">Обмен</option>
+                                                <option value="Купля\Продажа">Купля или Продажа</option>
+                                                <option value="Консультация">Консультация</option>
+                                            </select>
+                                            <p>Вид запроса</p>
+                                        </label>
+                                        <label htmlFor="btn">
+                                            <input disabled={submiting} required type="submit" value={'Отправить'} />
+                                        </label>
+                                    </form>
                                 </div>
-                                <form onSubmit={handleSumbit} action="post">
-                                    <h1>Оставьте свои данные!</h1>
-                                    <label htmlFor="name">
-                                        <input onChange={handleChange} value={formData?.name} required type="text" name='name' id='name' placeholder='Имя' />
-                                        <p>Ваша имя</p>
-                                    </label>
-                                    <label htmlFor="phone">
-                                        <input onChange={handleChange} pattern='^\+996\s?\d{9}$' value={formData?.phone} required type="tel" name='phone' id='phone' placeholder='Телефон' />
-                                        <p>Ваш номер телефона</p>
-                                    </label>
-                                    <label htmlFor="option">
-                                        <select value={formData.option} onChange={handleChange} required name="option" id="option">
-                                            <option selected value="Обмен">Обмен</option>
-                                            <option value="Купля\Продажа">Купля или Продажа</option>
-                                            <option value="Консультация">Консультация</option>
-                                        </select>
-                                        <p>Вид запроса</p>
-                                    </label>
-                                    <label htmlFor="btn">
-                                        <input disabled={submiting} required type="submit" value={'Отправить'} />
-                                    </label>
-                                </form>
                             </div>
+
                         </SwiperSlide>
 
                     ))

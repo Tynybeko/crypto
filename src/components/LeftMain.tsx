@@ -15,8 +15,7 @@ const LeftMain: React.FC = () => {
         <div className='left_main' >
             <div className="logo">
                 <Link href={'/'}>
-                    <img src="/assets/svg/bitexbook.svg" alt="Logo" />
-                    <h1><p>S</p>Cryptonit<span>KG</span></h1>
+                    <img src="/assets/logoSVG/logo-no-background.svg" alt="Logo" />
                 </Link>
 
             </div>
