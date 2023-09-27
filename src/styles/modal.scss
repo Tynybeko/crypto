@@ -12,13 +12,14 @@
     .inner {
         height: min-content;
         padding: 50px;
-        width: 50%;
+        width: 60%;
         justify-content: center;
         background-color: rgba(255, 255, 255, 0.558);
         border-radius: 30px;
         position: relative;
 
         h1 {
+            width: 100%;
             display: flex;
             gap: 10px;
             align-items: center;

@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import Calculator from '@/components/Calculator'
 import '@/styles/calculatorPage.scss'
 import axios from 'axios';
-
+import TradeView from '@/components/TradeView';
 
 
 
@@ -21,6 +21,7 @@ const page: React.FC = () => {
         <div className='calculator-page'>
             <div className="inner">
                 <Calculator />
+                <TradeView />
             </div>
         </div>
     )

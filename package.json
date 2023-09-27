@@ -9,27 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@binance/connector": "^3.0.0-rc.2",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@mui/material": "^5.14.10",
-    "@mui/styled-engine-sc": "^5.14.10",
     "@types/node": "20.6.2",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.7",
     "axios": "^1.5.0",
-    "binance": "^2.8.10",
-    "crypto": "^1.0.1",
-    "dns": "^0.2.2",
     "dotenv": "^16.3.1",
-    "net": "^1.0.2",
     "next": "13.4.19",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.67.0",
     "styled-components": "^5.3.11",
     "swiper": "^10.2.0",
-    "tls": "^0.0.1",
     "typescript": "5.2.2"
   },
   "devDependencies": {

@@ -1,8 +1,6 @@
-import { Metadata } from 'next'
+import Footer from '@/components/Footer'
 import '../app/globals.scss'
 import LeftMain from '@/components/LeftMain'
-import Header from '@/components/Header'
-
 
 export default function RootLayout({
     children,
@@ -20,6 +18,7 @@ export default function RootLayout({
                         {children}
                     </main>
                 </div>
+                <Footer />
             </body>
         </html>
     )

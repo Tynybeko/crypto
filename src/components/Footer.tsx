@@ -1,9 +1,11 @@
 'use client'
 import React from 'react'
 
+
 const Footer: React.FC = () => {
   return (
-    <footer id='footer'>Footer</footer>
+    <div className="App">
+    </div>
   )
 }
 

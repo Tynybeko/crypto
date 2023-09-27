@@ -1,14 +1,20 @@
 'use client'
-import React, { MutableRefObject, SetStateAction, useEffect, useRef, useState } from 'react'
+import React, { useState } from 'react'
 import type { quote } from './Calculator'
 import '@/styles/myChangerInput.scss'
+import type { setSelectParams } from './Calculator'
+import useDebounce from '@/hooks/useDebounce'
 
-
-const MyChangeSelect = ({ data, setQuote, myQuote }: { data: quote[] | undefined, setQuote: React.Dispatch<SetStateAction<quote>>, myQuote: quote }) => {
+const MyChangeSelect: React.FC<setSelectParams> = ({ data, myQuote, setQuote, currentId, id, inputValue, setInputValue, useCallChange }) => {
     const [changedValue, setValue] = useState<string>('')
     const [myData, setData] = useState<quote[] | undefined>(data)
     const [isOpenSelect, setOpenSelect] = useState<boolean>(false)
-
+    const [myState, setMyState] = useState<string | number>('0')
+    const handleChange = (e: string) => {
+        setInputValue(prev => ({ ...prev, [`Input${id}`]: e, id: id }))
+        useCallChange(e, id)
+    }
+    const handleDebounce = useDebounce(handleChange, 300)
     return (
         <div className='myChangeInput'>
             <div className="inner">
@@ -26,15 +32,20 @@ const MyChangeSelect = ({ data, setQuote, myQuote }: { data: quote[] | undefined
                                 setValue(e.target.value)
                             }} value={changedValue} placeholder={myQuote.symbol} id='changer' type="text" />
                         </div>
-                        <input type="number" placeholder='Введите число' />
+                        <input value={currentId == id ? myState : inputValue} onChange={(e) => {
+                            setMyState(e.target.value)
+                            handleDebounce(e.target.value)
+                        }} type="number" placeholder='Введите число' />
                     </div>
                     <div className={`selector ${isOpenSelect ? 'open-selector' : ''}`}>
                         {
                             myData?.map(el => (
                                 <option onClick={() => {
                                     setQuote(el)
-                                    setValue(el.name)
+                                    setValue(el.symbol)
                                     setOpenSelect(false)
+                                    setMyState('0')
+                                    setInputValue(prev => ({ ...prev, Input1: 0, Input2: 0 }))
                                 }} value="asdsad"><div className="icons">
                                         <img src={`/assets/CRP/${el.symbol.toLowerCase()}-logo.png`} alt={el.symbol} />
                                     </div> {el.name} </option>
