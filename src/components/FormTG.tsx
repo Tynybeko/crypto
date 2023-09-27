@@ -4,7 +4,7 @@ import useSendMessage from '@/hooks/useSendMessage'
 import Modal from './Modal'
 import '@/styles/formTG.scss'
 
-const FormTG = ({ setState }: { setState: React.Dispatch<SetStateAction<boolean>> }) => {
+const FormTG = () => {
     const [isOpen, setOpen] = useState<boolean>(false)
     const [submiting, setSubmit] = useState<boolean>(false)
     const [formData, setFormData] = useState<{ name: string, phone: string, option: string }>({
@@ -16,8 +16,6 @@ const FormTG = ({ setState }: { setState: React.Dispatch<SetStateAction<boolean>
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
         let key = e.target?.name
         setFormData(prev => ({ ...prev, [key]: e.target.value }))
-        setState(false)
-        
     }
 
     const handleSumbit = (e: React.ChangeEvent<HTMLFormElement>) => {
@@ -31,7 +29,6 @@ const FormTG = ({ setState }: { setState: React.Dispatch<SetStateAction<boolean>
                 setOpen(false)
             }, 2000)
             setFormData({ name: '', phone: '', option: 'Обмен' })
-            setState(true)
         })
     }
 
