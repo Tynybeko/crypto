@@ -2,6 +2,7 @@ import '../app/globals.scss'
 import Head from 'next/head'
 import LeftMain from '../components/LeftMain'
 import Footer from '../components/Footer'
+import PWAInstaller from '@/components/PWAInstaller'
 
 export default function RootLayout({
   children,
@@ -17,6 +18,7 @@ export default function RootLayout({
         <link rel="manifest" href="/favicon/site.webmanifest" />
         <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#7c7c7c" />
         <meta name="msapplication-TileColor" content="#000000" />
+        <meta name="mobile-web-app-capable" content="yes" />
         <meta name="theme-color" content="#000000" />
       </head>
       <body>
@@ -29,6 +31,7 @@ export default function RootLayout({
           </main>
         </div>
         <Footer />
+        <PWAInstaller />
       </body>
     </html>
   )
