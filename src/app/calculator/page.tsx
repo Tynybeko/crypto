@@ -1,8 +1,8 @@
 import React from 'react'
 import { Metadata } from 'next'
-import Calculator from '@/app/components/Calculator'
+import Calculator from '@/components/Calculator'
 import '@/styles/calculatorPage.scss'
-import TradeView from '@/app/components/TradeView';
+import TradeView from '@/components/TradeView';
 
 
 

@@ -1,8 +1,8 @@
-import Banner from "@/app/components/Banner";
-import TradeView from "@/app/components/TradeView";
+import Banner from "@/components/Banner";
+import TradeView from "@/components/TradeView";
 import { Metadata } from 'next'
 import '@/styles/homePage.scss'
-import MyTools from "@/app/components/MyTools";
+import MyTools from "@/components/MyTools";
 
 
 export const metadata: Metadata = {
