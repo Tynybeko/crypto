@@ -201,6 +201,7 @@
 
             select {
                 font-size: 12px;
+                padding: 5px 10px;
             }
 
             input[type="submit"] {
@@ -212,4 +213,21 @@
 
 
    
+}
+
+
+@media (max-width: 350px) {
+    
+    .banner .back .inner .text {
+        h1 {
+            height: 60px;
+            font-size: 17px;
+            padding-bottom: 14px;
+        }
+
+        p {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
 }
