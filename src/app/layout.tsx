@@ -1,7 +1,6 @@
 import '../app/globals.scss'
-import Head from 'next/head'
-import LeftMain from '../components/LeftMain'
-import Footer from '../components/Footer'
+import LeftMain from '@/components/LeftMain'
+import Footer from '@/components/Footer'
 
 export default function RootLayout({
   children,

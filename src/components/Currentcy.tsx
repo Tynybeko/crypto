@@ -1,19 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import '@/styles/currency.scss'
-
+import useDebounce from '@/hooks/useDebounce'
 
 
 export const getCurrency = async () => {
-    const { data } = await axios.get('https://data.fx.kg/api/v1/central', {
-        headers: {
-            "Authorization": "Bearer pJtjy7UTcWh0aXRLRWuyDmBWqjRxdM5gjw8FIufqc53eec28"
-        },
-        params: {
-            "signature": 'myCrypro_v2API'
-        }
+    const { data } = await axios.get('https://test-ss-lrp7.onrender.com/currencyAPI', {
     })
-    return data
+    return data.data
 }
 const Currentcy = () => {
     const [{ usd, rub }, setCurrency] = useState<{ usd: number, rub: number }>({ usd: 0, rub: 0 })
