@@ -4,6 +4,7 @@
     .back {
         background-position: center;
         background-size: cover;
+        width: 100%;
 
         .inner {
             background-color: rgba(0, 0, 0, 0.442);
@@ -138,20 +139,77 @@
 
 }
 
-// @media (max-width: 1200px) {
-//     .banner .inner {
-//         flex-direction: column;
-//         gap: 30px;
+@media (max-width: 800px) {
+    .banner {
+        .inner {
+            flex-direction: column;
+            gap: 30px;
 
-//         .text {
-//             width: 100%;
 
-//         }
 
-//         form {
-//             width: 100%;
-//             gap: 10px;
-//             padding: 20px;
-//         }
-//     }
-// }
+        }
+    }
+
+    .banner .back .inner {
+        .text {
+            width: 100%;
+
+        }
+
+        form {
+            width: 100%;
+            gap: 10px;
+            padding: 20px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+
+
+    .banner .back .inner .text {
+        h1 {
+            height: 60px;
+            font-size: 20px;
+            padding-bottom: 14px;
+        }
+
+        p {
+            font-size: 13px;
+            line-height: 18px;
+        }
+    }
+
+    .banner .back .inner form {
+        padding: 15px;
+        gap: 8px;
+
+        h1 {
+            font-size: 17px;
+        }
+
+        label {
+
+            input {
+                padding: 5px 10px;
+                font-size: 12px;
+            }
+
+            p {
+                font-size: 10px;
+            }
+
+            select {
+                font-size: 12px;
+            }
+
+            input[type="submit"] {
+                font-size: 12px !important;
+
+            }
+        }
+    }
+
+
+   
+}

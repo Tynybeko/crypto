@@ -103,6 +103,7 @@
 
     .inner .block:nth-child(3) {
         animation: my_tool_effect 2.1s;
+
         h3 img {
             width: 40px;
             height: 40px;
@@ -123,4 +124,45 @@
 
 
 
+}
+
+@media (max-width: 500px) {
+
+    .my_tools .inner .block {
+        gap: 5px;
+
+        h3 {
+            font-size: 15px !important;
+
+            img {
+                width: 25px !important;
+                height: 25px !important;
+            }
+        }
+
+        div {
+            img {
+                width: 140px;
+                height: 120px;
+            }
+
+            p {
+                font-size: 11px !important;
+            }
+        }
+
+
+    }
+
+    .my_tools .inner {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+    }
+
+    .my_tools {
+        padding: 30px;
+    }
+
+    .my_tools h1 {
+        font-size: 25px;
+    }
 }
