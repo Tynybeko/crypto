@@ -44,3 +44,32 @@
         font-style: italic;
     }
 }
+
+@media (max-width: 450px) {
+    .myCurrency {
+        h3 {
+            font-size: 15px;
+
+            img {
+                width: 25px;
+                height: 25px;
+            }
+        }
+
+        .block {
+            p {
+                font-size: 10px;
+            }
+
+            img {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        .foot {
+            margin-top: 10px;
+            font-size: 9px;
+        }
+    }
+}

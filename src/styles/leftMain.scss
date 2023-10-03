@@ -147,3 +147,24 @@
 
 
 }
+
+@media (max-width: 450px) {
+    .left_main .inner a {
+        font-size: 12px;
+
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    .left_main .inner {
+        gap: 13px;
+    }
+
+    .left_main .logo {
+        padding-bottom: 15px;
+    }
+
+
+}
