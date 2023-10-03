@@ -189,6 +189,8 @@
 
             select {
                 font-size: 10px;
+                padding: 5px 10px;
+
 
             }
 
@@ -206,6 +208,24 @@
     .myChangeInput {
         width: 265px;
 
+    }
+
+    .calculator-page .inner .calculator-block .text button {
+        font-size: 15px;
+    }
+
+    .myChangeInput .inner .changer-input .content-input {
+
+        &-field {
+            input {
+                padding: 5px;
+                font-size: 13px;
+            }
+        }
+
+        input[type="number"] {
+            font-size: 15px;
+        }
     }
 
 
