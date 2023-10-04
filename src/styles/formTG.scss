@@ -90,3 +90,9 @@ form {
         font-weight: 400;
     }
 }
+
+@media (max-width: 400px) {
+    form {
+        gap: 10px;
+    }
+}
