@@ -27,7 +27,7 @@ const AboutBlock = () => {
                     <div key={el.id} onClick={() => {
                         setBlocks([...myBlocks.map((element: AboutBlockType) => element.id == el.id ? { ...element, isOpen: !element.isOpen } : element)])
                     }} className={`block ${el.isOpen ? 'actived' : ''}`}>
-                        <h1>{el.title}<svg className="feather feather-arrow-down-right" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="7" x2="17" y1="7" y2="17" /><polyline points="17 7 17 17 7 17" /></svg> </h1>
+                        <h1>{el.title}<svg className="feather feather-arrow-down-right" fill="none" height="24" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><line x1="7" x2="17" y1="7" y2="17" /><polyline points="17 7 17 17 7 17" /></svg> </h1>
                         <div className='block-inner'>
                             <ul>
                                 {
